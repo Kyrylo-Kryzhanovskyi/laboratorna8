@@ -28,18 +28,18 @@ a. поточний з іншого стека (цей стек може міс�
 b. з поточного - до іншого (цей стек може містити елементи суперкласу щодо
 класу елементів поточного стека).
 Реалізація MyStack має коректно обробляти виклики:
-MyStack&lt;Number&gt; stN = new MyStack&lt;&gt;();
-MyStack&lt;Integer&gt; stI = new MyStack&lt;&gt;();
-MyStack&lt;Double&gt; stD = new MyStack&lt;&gt;();
-for(int i = 0; i &lt; 3; i++) {
-stI.push( new Integer( i ) );
-stD.push( new Double( i + 3 ) );
-}
-System.out.println( &quot;Integer stack: &quot; + stI.toString() );
-System.out.println( &quot;Double stack: &quot; + stD.toString() );
-stN.addAll( stI );
-stD.moveElementsTo( stN );
-System.out.println( &quot;Number stack: &quot; + stN.toString() );
+  MyStack&lt;Number&gt; stN = new MyStack&lt;&gt;();
+  MyStack&lt;Integer&gt; stI = new MyStack&lt;&gt;();
+  MyStack&lt;Double&gt; stD = new MyStack&lt;&gt;();
+  for(int i = 0; i &lt; 3; i++) {
+    stI.push( new Integer( i ) );
+    stD.push( new Double( i + 3 ) );
+  }
+  System.out.println( &quot;Integer stack: &quot; + stI.toString() );
+  System.out.println( &quot;Double stack: &quot; + stD.toString() );
+  stN.addAll( stI );
+  stD.moveElementsTo( stN );
+  System.out.println( &quot;Number stack: &quot; + stN.toString() );
 
 Результат роботи:
 Integer stack: [ 0, 1, 2 ]
